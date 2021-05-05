@@ -38,8 +38,6 @@
 								<properties>
 									<env>dev</env>
 									<api.id>16833706</api.id>
-									<anypoint.platform.client_id>33a3258cc17540eda5720ebccd709c1e</anypoint.platform.client_id>
-									<anypoint.platform.client_secret>54Eff04773DA4bc4Be852Be9d87F823d</anypoint.platform.client_secret>
 								</properties>
 							</cloudHubDeployment>
 						</configuration>
@@ -91,8 +89,6 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<username>chinna04</username>
-						<password>Realtime@123</password>
 						<muleVersion>4.3.0</muleVersion>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
@@ -152,4 +148,5 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+
 </project>
