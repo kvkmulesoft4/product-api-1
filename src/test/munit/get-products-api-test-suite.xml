@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="get-products-api-test-suite.xml" />
+	<global-property doc:name="Global Property" doc:id="2b4b316c-4b0c-41ff-8f4a-196838fcfe67" name="env" value="dev" />
+	<global-property doc:name="Global Property" doc:id="7b5a7997-191a-4f69-b29b-fc1ed3fca7f3" name="api.id" value="356544" />
+	<munit:test name="get-products-api-test-suite-get:\products:product-api-configTest" doc:id="8985b4e0-90da-4386-be8d-75e33c9e24b8" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\products:product-api-config" doc:id="cccdc8f8-4c60-4210-b386-aaff29e23e7f" name="get:\products:product-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<logger level="INFO" doc:name="Info Log" doc:id="1438f304-ee5b-4eec-ad15-a1bbe8491774" message="#[payload]"/>
+			<munit-tools:assert-that doc:name="Assert Payload Not Null" doc:id="81d73fb0-eb03-4117-a38b-024369b20014" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
