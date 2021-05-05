@@ -15,13 +15,9 @@ pipeline {
 
      stage('Deployment') {
       steps {
-            bat 'clean package deploy -Pdev -DmuleDeploy'
+            bat 'mvn clean package deploy -Pdev -DmuleDeploy'
       }
     }
 
-  }
-
-  tools {
-    maven 'Maven 3.8.1'
   }
 }
