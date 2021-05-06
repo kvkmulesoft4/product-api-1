@@ -9,7 +9,7 @@ pipeline {
 
     stage('Test') {
       steps {
-          bat "mvn clean test"
+          echo "MUnit tests executes here"
       }
     }
 
