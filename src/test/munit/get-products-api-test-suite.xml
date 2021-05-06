@@ -8,15 +8,13 @@
 		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
 	<munit:config name="get-products-api-test-suite.xml" />
-	<global-property doc:name="Global Property" doc:id="2b4b316c-4b0c-41ff-8f4a-196838fcfe67" name="env" value="dev" />
-	<global-property doc:name="Global Property" doc:id="7b5a7997-191a-4f69-b29b-fc1ed3fca7f3" name="api.id" value="356544" />
-	<munit:test name="get-products-api-test-suite-get:\products:product-api-configTest" doc:id="8985b4e0-90da-4386-be8d-75e33c9e24b8" description="Test">
+	<munit:test name="get-products-api-test-suite-get:\products:product-api-configTest" doc:id="6f18f993-dde5-49b0-900c-69142eb56b67" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to get:\products:product-api-config" doc:id="cccdc8f8-4c60-4210-b386-aaff29e23e7f" name="get:\products:product-api-config"/>
+			<flow-ref doc:name="Flow-ref to get:\products:product-api-config" doc:id="ad446e32-b531-4025-9c60-3abe2cccb161" name="get:\products:product-api-config"/>
 		</munit:execution>
 		<munit:validation >
-			<logger level="INFO" doc:name="Info Log" doc:id="1438f304-ee5b-4eec-ad15-a1bbe8491774" message="#[payload]"/>
-			<munit-tools:assert-that doc:name="Assert Payload Not Null" doc:id="81d73fb0-eb03-4117-a38b-024369b20014" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+			<logger level="INFO" doc:name="Info Log" doc:id="3f927c86-3157-42d7-a69a-24437aba81a8" message="#[payload]"/>
+			<munit-tools:assert doc:name="Assert Payload Not Null" doc:id="cc84f2fe-2097-4457-8e1b-1c3ba3ef513d" />
 		</munit:validation>
 	</munit:test>
 
