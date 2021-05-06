@@ -115,8 +115,8 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<username>chinna04</username>
-						<password>Realtime@123</password>
+						<username>${username}</username>
+						<password>${password}</password>
 						<muleVersion>4.3.0</muleVersion>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
